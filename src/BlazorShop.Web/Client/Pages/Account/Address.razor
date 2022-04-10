@@ -1,0 +1,70 @@
+﻿@page "/account/address"
+@attribute [Authorize]
+
+@if (model == null)
+{
+    <LoadingScreen />
+}
+else
+{
+    <section class="section-content padding-y bg">
+        <div class="container">
+
+            <div class="row">
+
+                <AccountSidebar />
+
+                <main class="col-md-9">
+
+                    <article class="card mb-3">
+                        <div class="card-body">
+
+                            <h4 class="card-title mb-4">Address</h4>
+                            <EditForm Model="model" OnValidSubmit="SubmitAsync">
+
+                                <ErrorsList ShowErrors="ShowErrors" Errors="Errors" />
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Address Line</label>
+                                    <div class="col-sm-6">
+                                        <InputText @bind-Value="model.Description" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">City</label>
+                                    <div class="col-sm-6">
+                                        <InputText @bind-Value="model.City" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">State</label>
+                                    <div class="col-sm-6">
+                                        <InputText @bind-Value="model.State" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Country</label>
+                                    <div class="col-sm-6">
+                                        <InputText @bind-Value="model.Country" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">PostalCode</label>
+                                    <div class="col-sm-6">
+                                        <InputText @bind-Value="model.PostalCode" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary"> Save changes </button>
+                            </EditForm>
+
+                        </div>
+                    </article>
+
+                </main>
+            </div>
+
+        </div>
+    </section>
+}

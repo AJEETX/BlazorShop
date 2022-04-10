@@ -1,0 +1,27 @@
+﻿@page "/order/confirmed/{Id}"
+@attribute [Authorize]
+
+
+<section class="section-pagetop bg">
+    <div class="container text-center">
+        <h1 class="title-page text-success">
+            <i class="fas fa-check-circle"></i>
+        </h1>
+        <h1 class="title-page">
+            Thank you!
+        </h1>
+        <h5 class="text-muted">
+            You order was successfully completed.
+        </h5>
+
+        <br />
+
+        <a class="btn btn-primary" href="/order/details/@Id"> Order details </a>
+        <a class="btn btn-outline-primary-light" href="/products/page/1"> Back to shop </a>
+    </div>
+</section>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+}

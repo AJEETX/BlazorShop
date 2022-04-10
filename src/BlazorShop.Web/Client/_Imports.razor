@@ -1,0 +1,52 @@
+﻿@using System.Net
+@using System.Net.Http
+@using System.Net.Http.Headers
+@using System.Net.Http.Json
+
+@using Blazored.LocalStorage
+@using Blazored.Toast
+@using Blazored.Toast.Services
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.WebAssembly.Http
+@using Microsoft.JSInterop
+
+@using BlazorShop.Common
+@using BlazorShop.Models
+@using BlazorShop.Models.Addresses
+@using BlazorShop.Models.Categories
+@using BlazorShop.Models.Identity
+@using BlazorShop.Models.Orders
+@using BlazorShop.Models.Products
+@using BlazorShop.Models.ShoppingCarts
+@using BlazorShop.Models.Wishlists
+@using BlazorShop.Web.Client.Infrastructure
+@using BlazorShop.Web.Client.Infrastructure.Extensions
+@using BlazorShop.Web.Client.Infrastructure.Services
+@using BlazorShop.Web.Client.Infrastructure.Services.Authentication
+@using BlazorShop.Web.Client.Infrastructure.Services.Addresses
+@using BlazorShop.Web.Client.Infrastructure.Services.Categories
+@using BlazorShop.Web.Client.Infrastructure.Services.Orders
+@using BlazorShop.Web.Client.Infrastructure.Services.Products
+@using BlazorShop.Web.Client.Infrastructure.Services.ShoppingCarts
+@using BlazorShop.Web.Client.Infrastructure.Services.Wishlists
+@using BlazorShop.Web.Client.Pages.Account
+@using BlazorShop.Web.Client.Shared
+@using BlazorShop.Web.Client.Shared.Common
+@using BlazorShop.Web.Client.Shared.Navigation
+@using BlazorShop.Web.Client.Shared.Products
+
+@inject ApiAuthenticationStateProvider AuthState
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+@inject IToastService ToastService
+@inject IAuthService AuthService
+@inject IAddressesService AddressesService
+@inject ICategoriesService CategoriesService
+@inject IOrdersService OrdersService
+@inject IProductsService ProductsService
+@inject IShoppingCartsService ShoppingCartsService
+@inject IWishlistsService WishlistsService

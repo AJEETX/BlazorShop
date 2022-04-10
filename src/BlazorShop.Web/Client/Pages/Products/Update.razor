@@ -1,0 +1,82 @@
+﻿@page "/products/update/{Id:int}"
+@attribute [Authorize(Roles = Constants.AdministratorRole)]
+
+@if (categories == null || model == null)
+{
+    <LoadingScreen />
+}
+else
+{
+    <section class="section-pagetop bg">
+        <div class="container">
+            <h2 class="title-page text-center">Update Product</h2>
+        </div>
+    </section>
+
+    <section class="section-content padding-y bg">
+        <div class="container">
+            <div class="row">
+                <div class="card mx-auto">
+                    <article class="card-body">
+
+                        <EditForm Model="model" OnValidSubmit="SubmitAsync">
+
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+
+
+                            <div class="form-group">
+                                <label>Name</label>
+                                <InputText @bind-Value="model.Name" type="text" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Category</label>
+                                <InputSelectNumber @bind-Value="model.CategoryId" class="form-control">
+                                    @foreach (var category in categories)
+                                    {
+                                        if (model.CategoryId == category.Id)
+                                        {
+                                            <option value="@category.Id" selected="">@category.Name</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@category.Id">@category.Name</option>
+                                        }
+                                    }
+                                </InputSelectNumber>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <label>Price</label>
+                                    <InputNumber @bind-Value="model.Price" type="number" class="form-control" />
+                                </div>
+                                <div class="col form-group">
+                                    <label>Quantity</label>
+                                    <InputNumber @bind-Value="model.Quantity" type="number" class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Image</label>
+                                <InputText @bind-Value="model.ImageSource" type="url" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Description</label>
+                                <InputTextArea @bind-Value="model.Description" rows="2" class="form-control"></InputTextArea>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-block btn-primary">Update</button>
+                            </div>
+
+                        </EditForm>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+}

@@ -1,0 +1,46 @@
+﻿@page "/account/register"
+
+<section class="section-content padding-y bg">
+
+    <div class="card mx-auto" style="max-width:520px; margin-top:40px;">
+        <article class="card-body">
+            <header class="mb-4"><h4 class="card-title">Register</h4></header>
+            <EditForm Model="model" OnValidSubmit="SubmitAsync">
+
+                <ErrorsList ShowErrors="ShowErrors" Errors="Errors" />
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label>First name</label>
+                        <InputText @bind-Value="model.FirstName" type="text" class="form-control" />
+                    </div>
+                    <div class="col form-group">
+                        <label>Last name</label>
+                        <InputText @bind-Value="model.LastName" type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <InputText @bind-Value="model.Email" type="email" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <InputText @bind-Value="model.Password" type="password" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Confirm password</label>
+                    <InputText @bind-Value="model.ConfirmPassword" type="password" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block"> Register </button>
+                </div>
+            </EditForm>
+        </article>
+    </div>
+
+    <p class="text-center mt-4">Have an account? <a href="/account/login">Log In</a></p>
+    <br /><br />
+
+</section>

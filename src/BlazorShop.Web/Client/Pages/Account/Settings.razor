@@ -1,0 +1,59 @@
+﻿@page "/account/settings"
+@attribute [Authorize]
+
+@if (model == null)
+{
+    <LoadingScreen />
+}
+else
+{
+    <section class="section-content padding-y bg">
+        <div class="container">
+
+            <div class="row">
+
+                <AccountSidebar />
+
+                <main class="col-md-9">
+
+                    <article class="card mb-3">
+                        <div class="card-body">
+
+                            <h4 class="card-title mb-4">Account Settings</h4>
+                            <EditForm Model="model" OnValidSubmit="SubmitAsync">
+
+                                <ErrorsList ShowErrors="ShowErrors" Errors="Errors" />
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Email</label>
+                                    <div class="col-sm-6">
+                                        <InputText @bind-Value="email" type="email" class="form-control-plaintext" readonly />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">First name</label>
+                                    <div class="col-sm-6">
+                                        <InputText @bind-Value="model.FirstName" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Last name</label>
+                                    <div class="col-sm-6">
+                                        <InputText @bind-Value="model.LastName" type="text" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-primary"> Save changes </button>
+                            </EditForm>
+
+                        </div>
+                    </article>
+
+                </main>
+            </div>
+
+        </div>
+    </section>
+}

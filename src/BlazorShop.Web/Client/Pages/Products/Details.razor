@@ -1,0 +1,50 @@
+﻿@page "/products/{Id:int}/{ProductName}"
+
+@if (product == null)
+{
+    <LoadingScreen />
+}
+else
+{
+    <section class="section-content padding-y bg">
+        <div class="container">
+            <div class="card">
+                <div class="row no-gutters">
+                    <aside class="col-md-6">
+                        <article class="gallery-wrap">
+                            <div class="img-big-wrap">
+                                <a href="#"><img src="@product.ImageSource" /></a>
+                            </div>
+                        </article>
+                    </aside>
+                    <main class="col-md-6 border-left">
+                        <article class="content-body">
+
+                            <h2 class="title">@product.Name</h2>
+
+                            <div class="mb-3">
+                                <var class="price h4">$@product.Price</var>
+                            </div>
+
+                            <p>@product.Description</p>
+
+                            <dl class="row">
+
+                                <dt class="col-sm-3">Category</dt>
+                                <dd class="col-sm-9">@product.CategoryName</dd>
+
+                                <dt class="col-sm-3">Quantity</dt>
+                                <dd class="col-sm-9">@product.Quantity</dd>
+                            </dl>
+
+                            <hr />
+
+                            <AddToCartForm ProductId="@product.Id" ProductName="@product.Name" ProductQuantity="@product.Quantity" />
+
+                        </article>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </section>
+}

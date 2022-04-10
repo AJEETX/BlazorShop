@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShop.Web.Server", "BlazorShop.Web\Server\BlazorShop.Web.Server.csproj", "{DB65A845-54DF-46BE-A3D2-F5649FDD6D4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShop.Web.Client", "BlazorShop.Web\Client\BlazorShop.Web.Client.csproj", "{F040A063-ED39-45CA-B7F4-83ADB3BF119E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShop.Data", "BlazorShop.Data\BlazorShop.Data.csproj", "{ACEE929A-9C60-48B3-8B38-84908BC17A65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShop.Services", "BlazorShop.Services\BlazorShop.Services.csproj", "{A9EE1DC1-629A-45F6-AEC8-19C11E18C59B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorShop.Web", "BlazorShop.Web", "{AA6D4393-D20E-4AC9-BE03-57578265E4D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShop.Tests", "BlazorShop.Tests\BlazorShop.Tests.csproj", "{D46BC91D-2A4F-46C6-B274-B695062199C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShop.Models", "BlazorShop.Models\BlazorShop.Models.csproj", "{BE86E03D-4199-4B33-B71B-510D81FDA493}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShop.Common", "BlazorShop.Common\BlazorShop.Common.csproj", "{AC20B877-8103-4353-89FE-6F1E4E57BFE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACEE929A-9C60-48B3-8B38-84908BC17A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACEE929A-9C60-48B3-8B38-84908BC17A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACEE929A-9C60-48B3-8B38-84908BC17A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACEE929A-9C60-48B3-8B38-84908BC17A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9EE1DC1-629A-45F6-AEC8-19C11E18C59B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9EE1DC1-629A-45F6-AEC8-19C11E18C59B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9EE1DC1-629A-45F6-AEC8-19C11E18C59B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9EE1DC1-629A-45F6-AEC8-19C11E18C59B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB65A845-54DF-46BE-A3D2-F5649FDD6D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB65A845-54DF-46BE-A3D2-F5649FDD6D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB65A845-54DF-46BE-A3D2-F5649FDD6D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB65A845-54DF-46BE-A3D2-F5649FDD6D4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F040A063-ED39-45CA-B7F4-83ADB3BF119E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F040A063-ED39-45CA-B7F4-83ADB3BF119E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F040A063-ED39-45CA-B7F4-83ADB3BF119E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F040A063-ED39-45CA-B7F4-83ADB3BF119E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46BC91D-2A4F-46C6-B274-B695062199C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46BC91D-2A4F-46C6-B274-B695062199C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46BC91D-2A4F-46C6-B274-B695062199C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46BC91D-2A4F-46C6-B274-B695062199C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE86E03D-4199-4B33-B71B-510D81FDA493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE86E03D-4199-4B33-B71B-510D81FDA493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE86E03D-4199-4B33-B71B-510D81FDA493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE86E03D-4199-4B33-B71B-510D81FDA493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC20B877-8103-4353-89FE-6F1E4E57BFE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC20B877-8103-4353-89FE-6F1E4E57BFE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC20B877-8103-4353-89FE-6F1E4E57BFE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC20B877-8103-4353-89FE-6F1E4E57BFE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DB65A845-54DF-46BE-A3D2-F5649FDD6D4B} = {AA6D4393-D20E-4AC9-BE03-57578265E4D5}
+		{F040A063-ED39-45CA-B7F4-83ADB3BF119E} = {AA6D4393-D20E-4AC9-BE03-57578265E4D5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1286D423-C8CB-4E91-8648-59A21FD3297A}
+	EndGlobalSection
+EndGlobal

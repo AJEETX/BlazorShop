@@ -1,0 +1,55 @@
+﻿@page "/wishlist"
+@attribute [Authorize]
+
+@if (products == null)
+{
+    <LoadingScreen />
+}
+else
+{
+    <section class="section-content padding-y bg">
+        <div class="container">
+            <article class="card">
+                <header class="card-header"> My wishlist </header>
+                <div class="card-body">
+                    <div class="row">
+                        @foreach (var product in products)
+                        {
+                            <div class="col-md-3">
+                                <figure class="card card-product-grid  mb-3">
+                                    <div class="img-wrap">
+                                        <a href="products/@product.Id/@product.Name">
+                                            <img src="@product.ImageSource" />
+                                        </a>
+                                    </div>
+                                    <figcaption class="info-wrap">
+                                        <a href="products/@product.Id/@product.Name" class="title text-truncate">
+                                            @product.Name
+                                        </a>
+
+                                        <p class="price mb-2">$@product.Price</p>
+
+                                        <a @onclick="() => OnSubmitAsync(product.Id)"
+                                           @onclick:preventDefault
+                                           href="#"
+                                           class="btn btn-primary btn-sm">
+                                            Add to cart
+                                        </a>
+                                        <a @onclick="() => OnRemoveAsync(product.Id)"
+                                           @onclick:preventDefault
+                                           href="#"
+                                           class="btn btn-danger btn-sm"
+                                           data-toggle="tooltip"
+                                           title="Remove from wishlist">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+}
